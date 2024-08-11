@@ -1,0 +1,295 @@
+///////////////////////
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <h2>binary conver to decimal</h2>
+        
+       <label>Enter your:</label>
+       <input type="number" id="binary"><br>
+        <br>
+       <button onclick="convert()">convert</button>
+       <button onclick="reset()">reset</button>
+
+       <p>result octel value: <p id="octelkto"></p></p>
+       <p>result hexadecimal value: <p id="hexadecimakto"></p></p>
+       <p>result decimal  value: <p id="decimalkto"></p></p>
+
+
+       <script src="trinco.js"></script>
+    </body>
+</html>
+
+js
+function convert() {
+
+    let binaryN = document.getElementById("binary").value;
+
+    let decimal = parseInt(binaryN,2);
+
+    let octel = decimal.toString(8);
+    let hexa = decimal.toString(16);
+
+    document.getElementById("octelkto").innerText = octel;
+    document.getElementById("hexadecimakto").innerText = hexa;
+    document.getElementById("decimalkto").innerText = decimal;
+
+
+}
+
+function reset() {
+
+    document.getElementById("binary").value = "";
+
+}
+//////////////////////////
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>calculeter:</title>
+        <meta encoding="utf-8">
+        <link rel="stylesheet" href="calculeter.css">
+
+    </head>
+    <body>
+        
+        <div id="calculeter">
+
+            <input id="display" readonly>
+
+            <div>
+
+                <button onclick="appendToDisplay('+')">+</button>
+                <button onclick="appendToDisplay('7')">7</button>
+                <button onclick="appendToDisplay('8')">8</button>
+                <button onclick="appendToDisplay('9')">9</button>
+                <br>
+                <button onclick="appendToDisplay('-')" >-</button>
+                <button onclick="appendToDisplay('4')">4</button>
+                <button onclick="appendToDisplay('5')">5</button>
+                <button onclick="appendToDisplay('6')">6</button>
+                <br>
+                <button onclick="appendToDisplay('*')" >*</button>
+                <button onclick="appendToDisplay('1')">1</button>
+                <button onclick="appendToDisplay('2')">2</button>
+                <button onclick="appendToDisplay('3')">3</button>
+                <br>
+                <button onclick="appendToDisplay('/')" >/</button>
+                <button onclick="appendToDisplay('0')">0</button>
+                <button onclick="appendToDisplay('00')">00</button>
+                <button onclick="appendToDisplay('.')">.</button>
+<               <br>
+                <button onclick="calculeter()">=</button>
+                <button onclick="clearDisplay()" >C</button>
+                
+
+
+
+            </div>
+
+                <script src="calculeter.js"></script>
+
+        </div>
+
+
+
+    </body>
+</html>
+
+
+js
+
+const dispay = document.getElementById("display");
+
+
+function appendToDisplay(input) {
+    dispay.value += input;
+}
+
+
+function clearDisplay() {
+    dispay.value="";
+
+}
+
+
+
+
+
+function calculeter() {
+    try{
+        dispay.value = eval(dispay.value);
+    }
+    catch(error) {
+        dispay.value = "Error";
+    }
+
+}
+css
+
+
+body {
+    border: solid 2px blue;
+    width: 50%;
+    padding-left: 30px;
+}
+button {
+    
+}
+
+/////////////////////
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>page lyuot two part</title>
+        <meta encoding="utf-8">
+        <link rel="stylesheet" href="from.css"> 
+
+    </head>
+    <body>
+        
+        <h3>Speaker Registration</h3>
+    <div class="contan">
+        <div>
+
+            <table>
+                <tr>
+                    <td>Prefix</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><br>Name</td>
+                    <td> <input type="text" placeholder="First Name" id="ccc" ><input type="text"  id="cctv" placeholder="Last Name" ></td>
+                </tr>
+                <tr>
+                    <td> <br> Email</td>
+                    <td><br><input type="text" placeholder="xxxx.com"></td>
+                </tr>
+                <tr>
+                    <td> <br> Work Phone</td>
+                    <td> <br><input type="text"></td>
+                </tr>
+                <tr>
+                    <td> <br>Job Title</td>
+                    <td> <br><input type="text"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><br>Affiliation/Company/Organization</td>
+                       
+                </tr>
+                <tr>
+                    <td colspan="3"><input type="text" id="xx"></td>
+                </tr>
+                <tr>
+                    <td> <br> Location</td>
+                    <td><br><input type="text"></td>
+                </tr>
+            </table>
+            <br>
+          <p>Do you need assistance with your flight reservation</p>
+           
+           <input type="radio" id="viral" name="k2o">
+           <label for="">Yes</label>
+           <input type="radio" id="viral" name="k2o">
+           <label for="">No</label>
+
+        </div>
+
+
+            <div class="line"></div>
+
+
+
+
+
+
+        <div >
+
+            <p>What is your presentation type?</p>
+            <br>
+
+            <input type="radio" id="length" name="enter">
+            <label for="">Lcture</label><br>
+            <input type="radio" id="length"  name="enter">
+            <label for="">Case study</label><br>
+            <input type="radio" id="length" name="enter">
+            <label for="">Group Discusstion</label><br>
+            <input type="radio" id="length" name="enter">
+            <label for="">Product Demo</label><br>
+
+            <br><br><br>
+
+            <label for=""> Please share the title of your prasentation/speech</label><br>
+            <input type="text"  id="lasira">
+            <br><br><br><br>
+            <label for=""> Do you have any needs from a moderator?</label><br>
+            <input type="text" id="lasira">
+
+
+        </div>
+    </div>
+
+    </body>
+</html>
+
+css
+
+body{
+    border: solid 1px blue;
+    width: 800px;
+}
+.contan {
+    display: flex;
+
+
+}
+.contan div {
+    flex: 1;
+}
+h3 {
+    text-align: center;
+}
+input {
+    width: 200px;
+}
+td {
+    padding-left: 20px;
+}
+#xx {
+    width: 280px;
+}
+#viral {
+    width: 50px;
+}
+p,label {
+    padding-left: 20px;
+}
+
+#length {
+    width: 50px;
+}
+#lasira {
+    padding-left: 20px;
+}
+#ccc {
+    width: 120px;
+}
+#cctv {
+    width: 70px;
+}
+.line {
+    width: 0px;
+    height: 55%;
+    border: solid 1px black;
+    position: fixed;
+    top: 7%;
+    left:50%;
+}
